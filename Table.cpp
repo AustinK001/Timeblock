@@ -173,7 +173,7 @@
 
                      }
                     else {
-                    std::cout << "**!INVALID!**" std::end;
+                    std::cout << "**!INVALID!**" << std::endl;
                     restart1 = true;
                       }
                     }while(restart1);
