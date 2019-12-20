@@ -37,7 +37,7 @@
                     std::cin >> howlong;
                     system("clear");
                     char sec[8] = "Seconds";
-                    std::cout << "|"  << "For:" << std::setw(3) <<"|" << why << std::setw(5) << "   |   " << std::setw(5) << sec << "  "  << howlong <<   std::setw(5) <<"   |"<< std::endl;
+                    std::cout << "|"  << "For:" << std::setw(3) <<"|" << why << std::setw(5) << "   |   " << std::setw(5) << sec << ":  "  << howlong <<   std::setw(5) <<"   |"<< std::endl;
                     std::cin.get();
                     clock_t startTime = clock(); //Start timer based on seconds
                     double secondsPassed;
@@ -49,7 +49,7 @@
                         secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
                         if(secondsPassed >= secondsToDelay)
                         {
-                          std::cout << secondsPassed << " seconds have passed" << std::endl;
+                          std::cout << secondsPassed << " --> Seconds have passed" << std::endl;
 
                           flag = false;
                         }
@@ -64,7 +64,7 @@
                     std::cin >> howlong;
                     system("clear");
                     char min[8] = "Minutes";
-                    std::cout << "|"  << "For:" << std::setw(3) << "|" << why << std::setw(5)<<"   |   " << std::setw(5) << min << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
+                    std::cout << "|"  << "For:" << std::setw(3) << "|" << why << std::setw(5)<<"   |   " << std::setw(5) << min << ":  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                     std::cin.get();
                     clock_t startTime = clock(); //Start timer based on seconds
                     double secondsPassed;
@@ -78,7 +78,7 @@
                       secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
                       if(secondsPassed >= secondsToDelay)
                        {
-                        std::cout << actualM << " Minutes have passed" << std::endl;
+                        std::cout << actualM << "--> Minutes have passed" << std::endl;
                         flag = false;
                          }
                        }
@@ -92,7 +92,7 @@
                   std::cin >> howlong;
                   system("clear");
                   char hou[6] = "Hours";
-                  std::cout << "|"  << "For:" << std::setw(3) << "|" << why << std::setw(5)<<"   |   " << std::setw(5)<< hou << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
+                  std::cout << "|"  << "For:" << std::setw(3) << "|" << why << std::setw(5)<<"   |   " << std::setw(5)<< hou << ":  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                   std::cin.get();
                   clock_t startTime = clock(); //Start timer based on seconds
                   double secondsPassed;
@@ -106,7 +106,7 @@
                     secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
                     if(secondsPassed >= secondsToDelay)
                      {
-                      std::cout << actualM << " Hours have passed" << std::endl;
+                      std::cout << actualM << " --> Hours have passed" << std::endl;
                       flag = false;
                        }
                      }
@@ -120,7 +120,7 @@
                     std::cin >> howlong;
                     system("clear");
                      char days[5] = "Days";
-                     std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5)<< days << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
+                     std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5)<< days << ":  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                      std::cin.get();
                      clock_t startTime = clock(); //Start timer based on seconds
                      double secondsPassed;
@@ -134,7 +134,7 @@
                        secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
                        if(secondsPassed >= secondsToDelay)
                         {
-                         std::cout << actualM << " Days have passed" << std::endl;
+                         std::cout << actualM << " --> Days have passed" << std::endl;
                          flag = false;
                           }
                         }
@@ -149,7 +149,7 @@
                      std::cout << "How many of given type?";
                      std::cin >> howlong;
                       char wee[6] = "Weeks";
-                      std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5) << wee << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
+                      std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5) << wee << ":  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                        std::cin.get();
                        clock_t startTime = clock(); //Start timer based on seconds
                        double secondsPassed;
@@ -163,7 +163,7 @@
                          secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
                          if(secondsPassed >= secondsToDelay)
                           {
-                           std::cout << actualM << " Weeks have passed" << std::endl;
+                           std::cout << actualM << " --> Weeks have passed" << std::endl;
                            flag = false;
                             }
                           }
