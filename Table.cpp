@@ -178,7 +178,6 @@
                       }
                     }while(restart1);
                   }
-               }
 
 
 int main()  {
