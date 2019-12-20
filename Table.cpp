@@ -13,7 +13,7 @@
   }
         void b() {
           system("clear");
-          bool restart = false;
+          bool restart1 = false;
           do {
           char why[20];
           int evaltype;
@@ -174,9 +174,9 @@
                      }
                     else {
                     std::cout << "**!INVALID!**" std::end;
-                    restart = true;
+                    restart1 = true;
                       }
-                    }while(restart);
+                    }while(restart1);
                   }
                }
 
