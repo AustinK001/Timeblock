@@ -82,7 +82,7 @@
                         flag = false;
                          }
                        }
-                       std::string file = "Sirens.wav";
+                       std::string file = "/Users/admin/Desktop/TimeBlockingAlarm/Timeblock/AlarmSounds/Sirens.wav";
                        std::string command = "afplay " + file;
                        system(command.c_str());
                   }
@@ -110,7 +110,7 @@
                       flag = false;
                        }
                      }
-                     std::string file = "Sirens.wav";
+                     std::string file = "/Users/admin/Desktop/TimeBlockingAlarm/Timeblock/AlarmSounds/Sirens.wav";
                      std::string command = "afplay " + file;
                      system(command.c_str());
                 }
@@ -138,7 +138,7 @@
                          flag = false;
                           }
                         }
-                        std::string file = "Sirens.wav";
+                        std::string file = "/Users/admin/Desktop/TimeBlockingAlarm/Timeblock/AlarmSounds/Sirens.wav";
                         std::string command = "afplay " + file;
                         system(command.c_str());
                    }
@@ -167,7 +167,7 @@
                            flag = false;
                             }
                           }
-                          std::string file = "Sirens.wav";
+                          std::string file = "/Users/admin/Desktop/TimeBlockingAlarm/Timeblock/AlarmSounds/Sirens.wav";
                           std::string command = "afplay " + file;
                           system(command.c_str());
 
@@ -176,7 +176,7 @@
 
 
 int main()  {
-  std::cout << "Welcome to the Time Blocking App & Quick Alarm!" << std::endl;
+  std::cout << "Welcome to the Time Blocking App & Quick Alarm for Time Mannagement!" << std::endl;
   std::cout << "For 24 Hour Time Blocking Enter 1" << std::endl;
   std::cout << "For Quick Alarm Enter 2 " << std::endl;
   int ans;
