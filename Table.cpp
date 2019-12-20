@@ -5,8 +5,16 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <cstdlib>
+#include <string>
+  void a(){
 
-        void a() {
+
+
+
+  }
+        void b() {
+          system("clear");
           char why[20];
           int evaltype;
           char s[10] = "Seconds";
@@ -42,9 +50,13 @@
                         if(secondsPassed >= secondsToDelay)
                         {
                           std::cout << secondsPassed << " seconds have passed" << std::endl;
+
                           flag = false;
                         }
                       }
+                      std::string file = "/Users/admin/Desktop/TimeBlockingAlarm/Timeblock/AlarmSounds/Sirens.wav";
+                      std::string command = "afplay " + file;
+                      system(command.c_str());
                     }
                   else if (evaltype == 2){
                     int howlong;
@@ -70,6 +82,9 @@
                         flag = false;
                          }
                        }
+                       std::string file = "Sirens.wav";
+                       std::string command = "afplay " + file;
+                       system(command.c_str());
                   }
                 else if (evaltype == 3){
                   int howlong;
@@ -79,6 +94,25 @@
                   char hou[6] = "Hours";
                   std::cout << "|"  << "For:" << std::setw(3) << "|" << why << std::setw(5)<<"   |   " << std::setw(5)<< hou << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                   std::cin.get();
+                  clock_t startTime = clock(); //Start timer based on seconds
+                  double secondsPassed;
+                  howlong = howlong*3600;
+                  int actualM = howlong/3600;
+                  double secondsToDelay = howlong;
+                  std::cout << h << " to delay: " << actualM << std::endl;
+                  bool flag = true;
+                  while(flag)
+                   {
+                    secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
+                    if(secondsPassed >= secondsToDelay)
+                     {
+                      std::cout << actualM << " Hours have passed" << std::endl;
+                      flag = false;
+                       }
+                     }
+                     std::string file = "Sirens.wav";
+                     std::string command = "afplay " + file;
+                     system(command.c_str());
                 }
                 else if (evaltype == 4){
                     int howlong;
@@ -88,7 +122,27 @@
                      char days[5] = "Days";
                      std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5)<< days << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                      std::cin.get();
+                     clock_t startTime = clock(); //Start timer based on seconds
+                     double secondsPassed;
+                     howlong = howlong*86400;
+                     int actualM = howlong/86400;
+                     double secondsToDelay = howlong;
+                     std::cout << d << " to delay: " << actualM << std::endl;
+                     bool flag = true;
+                     while(flag)
+                      {
+                       secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
+                       if(secondsPassed >= secondsToDelay)
+                        {
+                         std::cout << actualM << " Days have passed" << std::endl;
+                         flag = false;
                           }
+                        }
+                        std::string file = "Sirens.wav";
+                        std::string command = "afplay " + file;
+                        system(command.c_str());
+                   }
+
                    else if (evaltype == 5){
                      int howlong;
                      system("clear");
@@ -97,10 +151,42 @@
                       char wee[6] = "Weeks";
                       std::cout << "|"  << "For:" << std::setw(20) << "|" << why << std::setw(20)<<"   |   " << std::setw(5) << wee << "  " << howlong <<  std::setw(5)<<"   |"<< std::endl;
                        std::cin.get();
+                       clock_t startTime = clock(); //Start timer based on seconds
+                       double secondsPassed;
+                       howlong = howlong*604800;
+                       int actualM = howlong/604800;
+                       double secondsToDelay = howlong;
+                       std::cout << w << " to delay: " << actualM << std::endl;
+                       bool flag = true;
+                       while(flag)
+                        {
+                         secondsPassed = (clock() - startTime) / CLOCKS_PER_SEC;
+                         if(secondsPassed >= secondsToDelay)
+                          {
+                           std::cout << actualM << " Weeks have passed" << std::endl;
+                           flag = false;
+                            }
+                          }
+                          std::string file = "Sirens.wav";
+                          std::string command = "afplay " + file;
+                          system(command.c_str());
+
                      }
                    }
 
+
 int main()  {
-a();
+  std::cout << "Welcome to the Time Blocking App & Quick Alarm!" << std::endl;
+  std::cout << "For 24 Hour Time Blocking Enter 1" << std::endl;
+  std::cout << "For Quick Alarm Enter 2 " << std::endl;
+  int ans;
+  std::cin >> ans;
+
+  if (ans == 1){
+
+  }
+  else if (ans == 2){
+    b();
+}
                 return 0;
             }
