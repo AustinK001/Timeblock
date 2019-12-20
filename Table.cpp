@@ -10,11 +10,11 @@
   void a(){
 
 
-
-
   }
         void b() {
           system("clear");
+          bool restart = false;
+          do {
           char why[20];
           int evaltype;
           char s[10] = "Seconds";
@@ -172,10 +172,18 @@
                           system(command.c_str());
 
                      }
-                   }
+                    else {
+                    std::cout << "**!INVALID!**" std::end;
+                    restart = true;
+                      }
+                    }while(restart);
+                  }
+               }
 
 
 int main()  {
+  bool restart = false;
+     do {
   std::cout << "Welcome to the Time Blocking App & Quick Alarm for Time Mannagement!" << std::endl;
   std::cout << "For 24 Hour Time Blocking Enter 1" << std::endl;
   std::cout << "For Quick Alarm Enter 2 " << std::endl;
@@ -187,6 +195,12 @@ int main()  {
   }
   else if (ans == 2){
     b();
-}
+  }
+  else {
+    std::cout << "*** INVALID ***" << std::endl;
+    restart = true;
+    }
+  } while(restart);
+
                 return 0;
             }
